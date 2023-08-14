@@ -201,26 +201,6 @@ class MakeButtons:
         ]
         return buttons
 
-    def source_markup(self):
-        buttons = [
-            [
-                self.ikb(text="Github ❤️", url="https://github.com/The-HellBot"),
-                self.ikb(text="Repo 📦", url="https://github.com/The-HellBot/Music"),
-            ],
-            [
-                self.ikb(text="Under HellBot Network { 🇮🇳 }", url="https://t.me/HellBot_Networks"),
-            ],
-            [
-                self.ikb(text="Support 🎙️", url="https://t.me/HellBot_Chats"),
-                self.ikb(text="Updates 📣", url="https://t.me/Its_HellBot"),
-            ],
-            [
-                self.ikb(text="🔙", callback_data="help|start"),
-                self.ikb(text="🗑", callback_data="close"),
-            ]
-        ]
-        return buttons
-
     def start_markup(self, username: str):
         buttons = [
             [
@@ -232,9 +212,11 @@ class MakeButtons:
 
     def start_pm_markup(self, username: str):
         buttons = [
+            [   self.ikb(text="OWNER 🍁", url="https://t.me/II_mxni_II"),
+            ],
             [
-                self.ikb(text="Help ⚙️", callback_data="help|back"),
-                self.ikb(text="Source 📦", callback_data="source"),
+                self.ikb(text="HELP AND COMMANDS ⚙️", callback_data="help|back"),
+                self.ikb(text="SUPPORT ❄️", url="https://t.me/pakke_beli_7"),
             ],
             [
                 self.ikb(text="Add Me To Group 👥", url=f"https://t.me/{username}?startgroup=true"),
