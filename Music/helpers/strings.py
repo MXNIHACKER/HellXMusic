@@ -29,7 +29,7 @@ class TEXTS:
         "**📌 Pinged Bot Server!**\n\n"
         "**🏁 Speed:** __{0} ms__\n"
         "**⏳ Uptime:** __{1}__\n"
-        "**🎶 VC Ping:** __{2} ms__"
+        "**🎶 VC Ping:** __{2} ms__\n"
         "✨🥀ᴍᴀᴅᴇ ᴡɪᴛʜ 🖤 •┈❥ [𐏓 ⃪ ̶꯭꯭𝅥ͦ𝆬⧗꯭꯭̽ͥ ⃪ͥ͢ ᷟj̶🇩𝐄𝐕𝐈𝐋 🇰𝐈𝐍𝐆 ⃪آ͢آ❤️‍🔥𝆺꯭𝅥𝆺꯭𝅥༎ࠫ⛧‌ٖٖٖٖٖٖٜٖٖٖٖ](https://t.me/II_mxni_II) ||"
     )
     PLAYING = (
@@ -212,6 +212,5 @@ class TEXTS:
         "__» Feel free to dive in, try different commands, and have fun discovering all the possibilities!__\n"
         "__» Enjoy the music and let us know if you have any suggestions for improvement.__\n\n"
         "❤️🎶 @{2}"
-        "✨🇴𝐖𝐍𝐄𝐑•┈❥ @II_mxni_II"
     )
     PERFORMER = "[ †hê Hêllẞø† ]"
