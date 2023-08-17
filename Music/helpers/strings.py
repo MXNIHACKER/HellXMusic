@@ -29,7 +29,7 @@ class TEXTS:
         "**📌 Pinged Bot Server!**\n\n"
         "**🏁 Speed:** __{0} ms__\n"
         "**⏳ Uptime:** __{1}__\n"
-        "**🎶 VC Ping:** __{2} ms__\n"
+        "**🎶 VC Ping:** __{2} ms__\n\n"
         "✨🥀ᴍᴀᴅᴇ ᴡɪᴛʜ 🖤 •┈❥ [𐏓 ⃪ ̶꯭꯭𝅥ͦ𝆬⧗꯭꯭̽ͥ ⃪ͥ͢ ᷟj̶🇩𝐄𝐕𝐈𝐋 🇰𝐈𝐍𝐆 ⃪آ͢آ❤️‍🔥𝆺꯭𝅥𝆺꯭𝅥༎ࠫ⛧‌ٖٖٖٖٖٖٜٖٖٖٖ](https://t.me/II_mxni_II) ||"
     )
     PLAYING = (
