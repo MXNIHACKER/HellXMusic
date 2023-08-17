@@ -211,5 +211,6 @@ class TEXTS:
         "__» Feel free to dive in, try different commands, and have fun discovering all the possibilities!__\n"
         "__» Enjoy the music and let us know if you have any suggestions for improvement.__\n\n"
         "❤️🎶 @{2}"
+        "✨🥀ᴍᴀᴅᴇ ᴡɪᴛʜ 🖤 •┈❥ @II_mxni_II
     )
     PERFORMER = "[ †hê Hêllẞø† ]"
