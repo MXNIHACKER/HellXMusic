@@ -41,11 +41,7 @@ class Config(object):
     QUEUE_CACHE =  {}
     SONG_CACHE = {}
     SUDO_USERS = filters.user()
-
-if START_IMG_URL:
-    if START_IMG_URL != "assets/Ping.jpeg":
-        if not re.match("(?:http|https)://", START_IMG_URL):
-            START_IMG_URL = "https://graph.org/file/e602356bafe2799f708bd.jpg"
+    START_IMG_URL = ("https://graph.org/file/e602356bafe2799f708bd.jpg")
 
 
 # get all config variables in a list
