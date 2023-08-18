@@ -99,9 +99,6 @@ async def help(_, message: Message):
 
 @hellbot.app.on_message(filters.command("ping") & ~Config.BANNED_USERS)
 async def ping(_, message: Message):
-    await message.reply_photo(
-        photo=config.PING_IMG_URL,
-    )
     start_time = datetime.datetime.now()
     hell = await message.reply_text("Pong!")
     calls_ping = await hellmusic.ping()
