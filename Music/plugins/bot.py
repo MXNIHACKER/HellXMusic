@@ -33,7 +33,7 @@ async def start(_, message: Message):
                     hellbot.app.mention,
                 )
                 await message.reply_photo(
-                    results[0]["thumbnail"],
+                    photo=config.START_IMG_URL,
                     caption=about,
                     reply_markup=InlineKeyboardMarkup(
                         Buttons.song_details_markup(
@@ -99,6 +99,9 @@ async def help(_, message: Message):
 
 @hellbot.app.on_message(filters.command("ping") & ~Config.BANNED_USERS)
 async def ping(_, message: Message):
+    await message.reply_photo(
+        photo=config.PING_IMG_URL,
+    )
     start_time = datetime.datetime.now()
     hell = await message.reply_text("Pong!")
     calls_ping = await hellmusic.ping()
