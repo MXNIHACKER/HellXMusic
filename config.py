@@ -42,6 +42,16 @@ class Config(object):
     SONG_CACHE = {}
     SUDO_USERS = filters.user()
 
+if PING_IMG_URL:
+    if PING_IMG_URL != "assets/Ping.jpeg":
+        if not re.match("(?:http|https)://", PING_IMG_URL):
+            PING_IMG_URL = "https://telegra.ph/file/56d1760224589ee370186.jpg"
+
+if START_IMG_URL:
+    if START_IMG_URL != "assets/Ping.jpeg":
+        if not re.match("(?:http|https)://", START_IMG_URL):
+            START_IMG_URL = "https://graph.org/file/e602356bafe2799f708bd.jpg"
+
 
 # get all config variables in a list
 all_vars = [i for i in Config.__dict__.keys() if not i.startswith("__")]
