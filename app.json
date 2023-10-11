@@ -40,10 +40,6 @@
 			"description": "Channel/group id to log error/info messages.",
 			"value": ""
 		},
-        "OWNER_ID": {
-            "description": "Your telegram user id.",
-            "value": ""
-        },
         "HELLBOT_SESSION": {
             "description": "Paste pyrogram session string.",
             "value": ""
