@@ -133,7 +133,7 @@ class MakeButtons:
         else:
             buttons = [
                 [
-                    self.ikb(text="💘", url="https://t.me/ALL_ABOUT_VIBES"),
+                    self.ikb(text="💘", url="https://t.me/Devils_Hell_0"),
                     self.ikb("About Song", url=f"https://t.me/{username}?start=song_{video_id}"),
                 ],
                 [
