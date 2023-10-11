@@ -24,7 +24,7 @@ async def mute_unmute(_, message: Message):
             await db.set_watcher(message.chat.id, "mute", False)
             await hellmusic.unmute_vc(message.chat.id)
             return await message.reply_text(
-                f"__VC Unmuted by:__ {message.from_user.mention}"
+                f"__ᴠᴄ ᴜɴᴍᴜᴛᴇᴅ ʙʏ:__ {message.from_user.mention}"
             )
         else:
             return await message.reply_text("Voice Chat is not muted!")
@@ -35,7 +35,7 @@ async def mute_unmute(_, message: Message):
             await db.set_watcher(message.chat.id, "mute", True)
             await hellmusic.mute_vc(message.chat.id)
             return await message.reply_text(
-                f"__VC Muted by:__ {message.from_user.mention}"
+                f"__ᴠᴄ ᴍᴜᴛᴇᴅ ʙʏ:__ {message.from_user.mention}"
             )
 
 
@@ -51,7 +51,7 @@ async def pause_resume(_, message: Message):
             await db.set_watcher(message.chat.id, "pause", False)
             await hellmusic.resume_vc(message.chat.id)
             return await message.reply_text(
-                f"__VC Resumed by:__ {message.from_user.mention}"
+                f"__ᴠᴄ ʀᴇsᴜᴍᴇᴅ ʙʏ:__ {message.from_user.mention}"
             )
         else:
             return await message.reply_text("Voice Chat is not paused!")
@@ -62,7 +62,7 @@ async def pause_resume(_, message: Message):
             await db.set_watcher(message.chat.id, "pause", True)
             await hellmusic.pause_vc(message.chat.id)
             return await message.reply_text(
-                f"__VC Paused by:__ {message.from_user.mention}"
+                f"__ᴠᴄ ᴘᴀᴜsᴇᴅ ʙʏ:__ {message.from_user.mention}"
             )
 
 
@@ -74,7 +74,7 @@ async def pause_resume(_, message: Message):
 async def stop_end(_, message: Message):
     await hellmusic.leave_vc(message.chat.id)
     await db.set_loop(message.chat.id, 0)
-    await message.reply_text(f"__VC Stopped by:__ {message.from_user.mention}")
+    await message.reply_text(f"__ᴠᴄ sᴛᴏᴘᴘᴇᴅ ʙʏ:__ {message.from_user.mention}")
 
 
 @hellbot.app.on_message(filters.command("loop") & filters.group & ~Config.BANNED_USERS)
@@ -89,7 +89,7 @@ async def loop(_, message: Message):
         loop = int(message.command[1])
     except Exception:
         return await message.reply_text(
-            "Please enter a valid number! \n\nMaximum loop range is **10**. Give **0** to disable loop."
+            "ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴀ ᴠᴀʟᴜᴅ ɴᴜᴍʙᴇʀ! \n\nMaximum loop range is **10**. Give **0** to disable loop."
         )
     is_loop = await db.get_loop(message.chat.id)
     if loop == 0:
@@ -97,18 +97,18 @@ async def loop(_, message: Message):
             return await message.reply_text("There is no active loop in this chat!")
         await db.set_loop(message.chat.id, 0)
         return await message.reply_text(
-            f"__Loop disabled by:__ {message.from_user.mention}\n\nPrevious loop was: `{is_loop}`"
+            f"__ʟᴏᴏᴘ ᴅɪsᴀʙʟᴇᴅ ʙʏ:__ {message.from_user.mention}\n\nPrevious loop was: `{is_loop}`"
         )
     if 1 <= loop <= 10:
         final = is_loop + loop
         final = 10 if final > 10 else final
         await db.set_loop(message.chat.id, final)
         await message.reply_text(
-            f"__Loop set to:__ `{final}`\n__By:__ {message.from_user.mention} \n\nPrevious loop was: `{is_loop}`"
+            f"__ʟᴏᴏᴘ sᴇᴛ ᴛᴏ:__ `{final}`\n__By:__ {message.from_user.mention} \n\nPrevious loop was: `{is_loop}`"
         )
     else:
         return await message.reply_text(
-            "Please enter a valid number! \n\nMaximum loop range is **10**. Give **0** to disable loop."
+            "ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴀ ᴠᴀʟɪᴅ ɴᴜᴍʙᴇʀ! \n\nMaximum loop range is **10**. Give **0** to disable loop."
         )
 
 
@@ -159,7 +159,7 @@ async def seek(_, message: Message):
         return await message.reply_text("No active Voice Chat found here!")
     if len(message.command) < 2:
         return await message.reply_text(
-            "Please specify the time to seek! \n\n**Example:** \n__- Seek  10 secs forward >__ `/seek 10`. \n__- Seek  10 secs backward >__ `/seek -10`."
+            "Please specify the time to seek! \n\n**Example:** \n__- Seek  15 secs forward >__ `/seek 15`. \n__- Seek  15 secs backward >__ `/seek -15`."
         )
     hell = await message.reply_text("Seeking...")
     try:
@@ -177,15 +177,15 @@ async def seek(_, message: Message):
     played = int(que[0]["played"])
     duration = formatter.mins_to_secs(que[0]["duration"])
     if seek_type == 0:
-        if (played - seek_time) <= 10:
+        if (played - seek_time) <= 15:
             return await hell.edit_text(
-                "Cannot seek when only 10 seconds are left! Use a lesser value."
+                "Cannot seek when only 15 seconds are left! Use a lesser value."
             )
         to_seek = played - seek_time
     else:
-        if (duration - (played + seek_time)) <= 10:
+        if (duration - (played + seek_time)) <= 15:
             return await hell.edit_text(
-                "Cannot seek when only 10 seconds are left! Use a lesser value."
+                "Cannot seek when only 15 seconds are left! Use a lesser value."
             )
         to_seek = played + seek_time
     video = True if que[0]["vc_type"] == "video" else False
@@ -207,4 +207,4 @@ async def seek(_, message: Message):
     Queue.update_duration(message.chat.id, seek_type, seek_time)
     await hell.edit_text(
         f"Seeked `{seek_time}` seconds {'forward' if seek_type == 1 else 'backward'}!"
-    )
+)
