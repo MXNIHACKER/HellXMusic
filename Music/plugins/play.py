@@ -35,7 +35,7 @@ async def play_music(_, message: Message, context: dict):
             await db.update_user(user_id, "user_name", user_name)
         except:
             pass
-    hell = await message.reply_text("Processing ...")
+    hell = await message.reply_text("ʀᴜᴋᴏ ᴊʀᴀᴀ sᴀʙᴀʀ ᴋʀᴏ...")
     # initialise variables
     video, force, url, tgaud, tgvid = context.values()
     play_limit = formatter.mins_to_secs(f"{Config.PLAY_LIMIT}:00")
@@ -52,7 +52,7 @@ async def play_music(_, message: Message, context: dict):
             return await hell.edit(
                 f"Audio duration limit of {Config.PLAY_LIMIT} minutes exceeded."
             )
-        await hell.edit("Downloading ...")
+        await hell.edit("📝")
         file_path = await hellbot.app.download_media(message.reply_to_message)
         context = {
             "chat_id": message.chat.id,
@@ -80,7 +80,7 @@ async def play_music(_, message: Message, context: dict):
             return await hell.edit(
                 f"Audio duration limit of {Config.PLAY_LIMIT} minutes exceeded."
             )
-        await hell.edit("Downloading ...")
+        await hell.edit("📝")
         file_path = await hellbot.app.download_media(message.reply_to_message)
         context = {
             "chat_id": message.chat.id,
@@ -101,7 +101,7 @@ async def play_music(_, message: Message, context: dict):
         if not ytube.check(url):
             return await hell.edit("Invalid YouTube URL.")
         if "playlist" in url:
-            await hell.edit("Processing the playlist ...")
+            await hell.edit("💀")
             song_list = await ytube.get_playlist(url)
             random.shuffle(song_list)
             context = {
@@ -111,7 +111,7 @@ async def play_music(_, message: Message, context: dict):
             await player.playlist(hell, context, song_list, video)
             return
         try:
-            await hell.edit("Searching ...")
+            await hell.edit("📝")
             result = await ytube.get_data(url, False)
         except Exception as e:
             return await hell.edit(f"**Error:**\n`{e}`")
@@ -132,7 +132,7 @@ async def play_music(_, message: Message, context: dict):
     # if the user sent a query
     query = message.text.split(" ", 1)[1]
     try:
-        await hell.edit("Searching ...")
+        await hell.edit("📝")
         result = await ytube.get_data(query, False)
     except Exception as e:
         return await hell.edit(f"**Error:**\n`{e}`")
@@ -192,7 +192,7 @@ async def playing(_, message: Message):
 )
 @UserWrapper
 async def queued_tracks(_, message: Message):
-    hell = await message.reply_text("Getting Queue...")
+    hell = await message.reply_text("📝")
     chat_id = message.chat.id
     is_active = await db.is_active_vc(chat_id)
     if not is_active:
