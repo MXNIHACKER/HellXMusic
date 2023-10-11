@@ -85,7 +85,7 @@ class MakeButtons:
 
         if delete:
             btns = [btns]
-            btns.append([self.ikb(text="Delete All ❌", callback_data=f"delfavs|all|{user_id}")])
+            btns.append([self.ikb(text="ᴅᴇʟᴇᴛᴇ ᴀʟʟ", callback_data=f"delfavs|all|{user_id}")])
             buttons = btns + nav_btns
         else:
             buttons = nav_btns
@@ -133,6 +133,7 @@ class MakeButtons:
         else:
             buttons = [
                 [
+                    self.ikb(text="💘", url="https://t.me/ALL_ABOUT_VIBES"),
                     self.ikb("About Song", url=f"https://t.me/{username}?start=song_{video_id}"),
                 ],
                 [
@@ -147,20 +148,19 @@ class MakeButtons:
 
     def controls_markup(self, video_id, chat_id):
         buttons = [
-            [
+            [                       
                 self.ikb(text="⟲", callback_data=f"ctrl|bseek|{chat_id}"),
                 self.ikb(text="⦿", callback_data=f"ctrl|play|{chat_id}"),
                 self.ikb(text="⟳", callback_data=f"ctrl|fseek|{chat_id}"),
             ],
             [
-                self.ikb(text="⊡ End", callback_data=f"ctrl|end|{chat_id}"),
-                self.ikb(text="↻ Replay", callback_data=f"ctrl|replay|{chat_id}"),
-                self.ikb(text="∞ Loop", callback_data=f"ctrl|loop|{chat_id}"),
+                
+                self.ikb(text="↻ ʀᴇᴘʟᴀʏ", callback_data=f"ctrl|replay|{chat_id}"),
+                self.ikb(text="∞ ʟᴏᴏᴘ", callback_data=f"ctrl|loop|{chat_id}"),
             ],
             [
-                self.ikb(text="⊝ Mute", callback_data=f"ctrl|mute|{chat_id}"),
-                self.ikb(text="⊜ Unmute", callback_data=f"ctrl|unmute|{chat_id}"),
-                self.ikb(text="⊹ Skip", callback_data=f"ctrl|skip|{chat_id}"),
+                self.ikb(text="⊡ ᴇɴᴅ", callback_data=f"ctrl|end|{chat_id}"),
+                self.ikb(text="▶▶| sᴋɪᴘ", callback_data=f"ctrl|skip|{chat_id}"),
             ],
             [
                 self.ikb(text="🔙", callback_data=f"player|{video_id}|{chat_id}"),
@@ -198,70 +198,6 @@ class MakeButtons:
             [
                 self.ikb(text="🗑", callback_data="close"),
             ],
-        ]
-        return buttons
-
-    def start_markup(self, username: str):
-        buttons = [
-            [
-                self.ikb(text="Start Me 🎵", url=f"https://t.me/{username}?start=start"),
-                self.ikb(text="🗑", callback_data="close"),
-            ]
-        ]
-        return buttons
-
-    def start_pm_markup(self, username: str):
-        buttons = [
-            [   self.ikb(text="OWNER 🍁", url="https://t.me/II_mxni_II"),
-            ],
-            [
-                self.ikb(text="HELP AND COMMANDS ⚙️", callback_data="help|back"),
-                self.ikb(text="SUPPORT ❄️", url="https://t.me/pakke_beli_7"),
-            ],
-            [
-                self.ikb(text="Add Me To Group 👥", url=f"https://t.me/{username}?startgroup=true"),
-            ],
-            [
-                self.ikb(text="🗑", callback_data="close"),
-            ]
-        ]
-        return buttons
-
-    def help_gc_markup(self, username: str):
-        buttons = [
-            [
-                self.ikb(text="Get Help ❓", url=f"https://t.me/{username}?start=help"),
-                self.ikb(text="🗑", callback_data="close"),
-            ]
-        ]
-        return buttons
-
-    def help_pm_markup(self):
-        buttons = [
-            [
-                self.ikb(text="➊ Admins", callback_data="help|admin"),
-                self.ikb(text="➋ Users", callback_data="help|user"),
-            ],
-            [
-                self.ikb(text="➌ Sudos", callback_data="help|sudo"),
-                self.ikb(text="➍ Others", callback_data="help|others"),
-            ],
-            [
-                self.ikb(text="➎ Owner", callback_data="help|owner"),
-            ],
-            [
-                self.ikb(text="🔙", callback_data="help|start"),
-                self.ikb(text="🗑", callback_data="close"),
-            ],
-        ]
-        return buttons
-
-    def help_back(self):
-        buttons = [
-            [
-                self.ikb(text="🔙", callback_data="help|back"),
-                self.ikb(text="🗑", callback_data="close"),
-            ]
         ]
         return buttons
 
