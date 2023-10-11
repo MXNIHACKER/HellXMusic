@@ -8,12 +8,12 @@ class TEXTS:
         "**❆** {5}"
     )
     ABOUT_USER = (
-        "**✘ Top User Info:**\n\n"
-        "**💬 Name:** {0}\n"
-        "**💠 ID:** `{1}`\n"
-        "**⚜️ Level:** __{2}__\n"
-        "**🎶 Songs Played:** __{3}__\n"
-        "**〥 Joined Since:** __{4}__\n\n"
+        "**✘ ᴛᴏᴘ ᴜsᴇʀ ɪɴғᴏ:**\n\n"
+        "**💬 ɴᴀᴍᴇ:** {0}\n"
+        "**💠 ɪᴅ:** `{1}`\n"
+        "**⚜️ ʟᴇᴠᴇʟ:** __{2}__\n"
+        "**🎶 sᴏɴɢs ᴘʟᴀʏᴇᴅ:** __{3}__\n"
+        "**〥 ᴊᴏɪɴᴇᴅ sɪɴᴄᴇ:** __{4}__\n\n"
         "**❆** {5}"
     )
     BOOTED = (
@@ -26,11 +26,10 @@ class TEXTS:
         "**</>** {5}"
     )
     PING_REPLY = (
-        "**📌 Pinged Bot Server!**\n\n"
-        "**🏁 Speed:** __{0} ms__\n"
-        "**⏳ Uptime:** __{1}__\n"
-        "**🎶 VC Ping:** __{2} ms__\n\n"
-        "✨🥀ᴍᴀᴅᴇ ᴡɪᴛʜ 🖤 •┈❥ [𐏓 ⃪ ̶꯭꯭𝅥ͦ𝆬⧗꯭꯭̽ͥ ⃪ͥ͢ ᷟj̶🇩𝐄𝐕𝐈𝐋 🇰𝐈𝐍𝐆 ⃪آ͢آ❤️‍🔥𝆺꯭𝅥𝆺꯭𝅥༎ࠫ⛧‌ٖٖٖٖٖٖٜٖٖٖٖ](https://t.me/II_mxni_II) ||"
+        "**🏓 ᴩᴏɴɢ:** __{0} ms__\n"
+        "**⏳ ᴜᴘᴛɪᴍᴇ:** __{1}__\n"
+        "**🎶 ᴠᴄ ᴘɪɴɢ:** __{2} ms__\n\n"
+        "➤ ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️‍🩹 •┈❥ [𐏓 ⃪ ̶꯭꯭𝅥ͦ𝆬⧗꯭꯭̽ͥ ⃪ͥ͢ ᷟj̶🇩𝐄𝐕𝐈𝐋 🇰𝐈𝐍𝐆 ⃪آ͢آ❤️‍🔥𝆺꯭𝅥𝆺꯭𝅥༎ࠫ⛧‌ٖٖٖٖٖٖٜٖٖٖٖ](https://t.me/II_mxni_II) ||"
     )
     PLAYING = (
         "**❆** {0}\n\n"
@@ -71,19 +70,19 @@ class TEXTS:
         "❤️🎶 {0}"
     )
     STATS = (
-        "**⤞ Server Stats:**\n"
-        "    __Total Users:__ `{0} users`\n"
-        "    __Total Chats:__ `{1} chats`\n"
-        "    __Total Gbans:__ `{2} users`\n"
-        "    __Blocked Users:__ `{3} users`\n"
-        "    __Songs Played:__ `{4} songs`\n"
-        "    __Active VC:__ `{5} vc`\n\n"
-        "**⤞ System Stats:**\n"
-        "    __Core:__ `{6} cores`\n"
-        "    __CPU Usage:__ `{7}`\n"
-        "    __Disk Usage:__ `{8}`\n"
-        "    __RAM Usage:__ `{9}`\n"
-        "    __Uptime:__ `{10}`\n\n"
+        "**➥ sᴇʀᴠᴇʀ sᴛᴀᴛs:**\n"
+        "    __ᴛᴏᴛᴀʟ ᴜsᴇʀs:__ `{0} users`\n"
+        "    __ᴛᴏᴛᴀʟ ᴄʜᴀᴛs:__ `{1} chats`\n"
+        "    __ᴛᴏᴛᴀʟ ʙᴀɴs:__ `{2} users`\n"
+        "    __ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs:__ `{3} users`\n"
+        "    __sᴏɴɢs ᴘʟᴀʏᴇᴅ:__ `{4} songs`\n"
+        "    __ᴀᴄᴛɪᴠᴇ ᴠᴄ:__ `{5} vc`\n\n"
+        "**⤞ sʏsᴛᴇᴍ sᴛᴀᴛs:**\n"
+        "    __ᴄᴏʀᴇ:__ `{6} cores`\n"
+        "    __ᴄᴘᴜ ᴜsᴀɢᴇ:__ `{7}`\n"
+        "    __ᴅɪsᴋ ᴜsᴀɢᴇ:__ `{8}`\n"
+        "    __ʀᴀᴍ ᴜsᴀɢᴇ:__ `{9}`\n"
+        "    __ᴜᴘᴛɪᴍᴇ:__ `{10}`\n\n"
         "**</>** {11}"
     )
     SYSTEM = (
@@ -201,16 +200,12 @@ class TEXTS:
         "__» Feel free to contact us if you need any help regarding the bot.__\n\n"
         "❤️🎶 {0}"
     )
-    START_GC = (
-        "Yeah, I'm alive! "
-        "__Wanna listen to some music?__"
-    )
     START_PM = (
         "**Hello there** {0}**!**\n\n"
         "**I'm** {1} **, a music bot that can play music on Voice Chats.**\n"
         "**Add me to your group and play music freely!**\n\n"
         "__» Feel free to dive in, try different commands, and have fun discovering all the possibilities!__\n"
         "__» Enjoy the music and let us know if you have any suggestions for improvement.__\n\n"
-        "❤️🎶 @{2}"
+        "❤️🎶 "
     )
     PERFORMER = "[ †hê Hêllẞø† ]"
