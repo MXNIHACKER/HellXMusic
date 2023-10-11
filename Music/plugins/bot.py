@@ -107,7 +107,6 @@ async def ping(_, message: Message):
     await hell.edit_text(
         TEXTS.PING_REPLY.format(end_time, stats["uptime"], calls_ping),
         disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(Buttons.close_markup()),
     )
 
 
