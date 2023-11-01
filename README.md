@@ -63,7 +63,7 @@ This is a light weight source, as a result it gives faster and better performanc
 - Get All The Necessary Variables And Deploy To Heroku.
 - Some Mandatory Variables Are listed [Here](#Variables).
 - Fork & Star this repo.
-- Copy your fork link and paste it [here](https://docs.hellbot.tech/hellbot-userbot/deploy-to-heroku#generate-deploy-url)
+- <p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/MXNIHACKER/HellXMusic"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 - You'll get the deploy url, open it and you are good to go.
 
 ------
